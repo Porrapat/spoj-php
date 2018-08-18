@@ -5,7 +5,7 @@ $number_test_case = intval(fgets($stdin));
 
 for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
 {
-    $n = intval(fgets($stdin));    // Get third line
+    $n = intval(fgets($stdin));    // Get next line
 
     $sum = 0;
     for($i = 1; $i< $n; $i++)
