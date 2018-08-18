@@ -10,7 +10,8 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
     $sum = 0;
     $v = [];
     $t = 0;
-    for ($i = 1; $i <= (int)sqrt($n); $i++)
+    $sqrt_n = (int)sqrt($n);
+    for ($i = 1; $i <= $sqrt_n; $i++)
     {
         if ($n % $i == 0)
         {
@@ -40,7 +41,10 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
     }
 
     echo $sum;
-    echo "\n";
+    if($test_case_i < $number_test_case-1)
+    {
+        echo PHP_EOL;
+    }
 }
 
 fclose($stdin);
