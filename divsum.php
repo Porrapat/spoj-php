@@ -1,4 +1,7 @@
 <?php
+
+
+
 $stdin = fopen('php://stdin', 'r');
 // Get first line
 $number_test_case = intval(fgets($stdin));
@@ -43,8 +46,17 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
     echo $sum;
     if($test_case_i < $number_test_case-1)
     {
-        echo PHP_EOL;
+        echo "\n";
     }
 }
+
+function convert($size)
+{
+    $unit=array('b','kb','mb','gb','tb','pb');
+    return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
+}
+
+echo "\n";
+echo convert(memory_get_usage());
 
 fclose($stdin);
