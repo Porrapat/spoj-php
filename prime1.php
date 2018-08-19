@@ -37,15 +37,21 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
         else
         {
             $i = 5;
+            $to_return = true;
             while($i * $i <= $n)
             {
-                if($n % $i == 0 || $n % ($i + 2) == 0)
+                if(($n % $i == 0) || ($n % ($i + 2) == 0))
                 {
-                    continue;
+                    $to_return = false;
+                    break;
                 }
                 $i = $i + 6;
             }
-            echo $n."\n";
+
+            if($to_return == true)
+            {
+                echo $n."\n";
+            }
         }
         // if n ≤ 1
         //     return false
@@ -68,14 +74,6 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
     {
         echo "\n";
     }
-
-
-
-
-    // if($test_case_i < $number_test_case-1)
-    // {
-    //     // echo "\n";
-    // }
 }
 
 fclose($stdin);
