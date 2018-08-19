@@ -50,21 +50,4 @@ for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
     }
 }
 
-function convert($size)
-{
-    $unit=array('b','kb','mb','gb','tb','pb');
-    return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
-}
-
-echo "\n";
-echo convert(memory_get_usage())."\n";
-
-$time_end = microtime(true);
-
-//dividing with 60 will give the execution time in minutes otherwise seconds
-$execution_time = ($time_end - $time_start);
-
-//execution time of the script
-echo 'Total Execution Time: '.$execution_time.' Seconds'."\n";
-
 fclose($stdin);
