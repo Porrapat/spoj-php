@@ -56,15 +56,15 @@ function convert($size)
     return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
 }
 
-echo "\n";
-echo convert(memory_get_usage())."\n";
+// echo "\n";
+// echo convert(memory_get_usage())."\n";
 
-$time_end = microtime(true);
+// $time_end = microtime(true);
 
-//dividing with 60 will give the execution time in minutes otherwise seconds
-$execution_time = ($time_end - $time_start);
+// //dividing with 60 will give the execution time in minutes otherwise seconds
+// $execution_time = ($time_end - $time_start);
 
-//execution time of the script
-echo 'Total Execution Time: '.$execution_time.' Seconds'."\n";
+// //execution time of the script
+// echo 'Total Execution Time: '.$execution_time.' Seconds'."\n";
 
 fclose($stdin);

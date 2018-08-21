@@ -73,11 +73,21 @@ function mathexp_to_rpm_to_str($mathexp)
     return implode(mathexp_to_rpn($mathexp));
 }
 
-echo "PAO";
-echo "\n";
-// $res = mathexp_to_rpn("((a+t)*((b+(a+c))^(c+d)))");
-echo mathexp_to_rpm_to_str("((a+t)*((b+(a+c))^(c+d)))");
-// echo "\n";
-// var_dump( $res);
 
-// fclose($stdin);
+
+
+$stdin = fopen('php://stdin', 'r');
+// Get first line
+$number_test_case = intval(fgets($stdin));
+
+// echo $number_test_case;
+// echo "\n";
+for($test_case_i = 0; $test_case_i < $number_test_case; $test_case_i++)
+{
+    $line_m = fgets($stdin);    // Get third line
+    // echo mathexp_to_rpm_to_str("((a+t)*((b+(a+c))^(c+d)))");
+    echo mathexp_to_rpm_to_str($line_m);
+    echo "\n";
+}
+
+fclose($stdin);
