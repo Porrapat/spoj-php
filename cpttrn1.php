@@ -19,7 +19,7 @@ for($round = 0; $round < $number_test_case; $round++)
 
     for($i = 0; $i < $num_row; $i++)
     {
-        if($i % 2 == 0)
+        if($i % 2 === 0)
         {
             $print_star = true;
         }
