@@ -1,9 +1,5 @@
 <?php
 
-// To use it on unix system with PHP command line
-// php -v
-// cat example_1.txt | php example_1.php
-
 // Use PHP standard input.
 $stdin = fopen('php://stdin', 'r');
 
@@ -16,15 +12,11 @@ for($round = 0; $round < $number_test_case; $round++)
 
     $arr_m = explode(" ", $line_m);
 
-    // print_r($arr_m);
     $num_row = $arr_m[0];
     $num_col = $arr_m[1];
 
     $print_star = true;
 
-    // echo $num_row.' '.$num_col;
-    // echo "\n";
-    // echo "\n";
     for($i = 0; $i < $num_row; $i++)
     {
         if($i % 2 == 0)
@@ -47,24 +39,9 @@ for($round = 0; $round < $number_test_case; $round++)
             }
             $print_star = !$print_star;
         }
-        
         echo "\n";
     }
     echo "\n";
-
-    // echo $num_row;
-    // echo " ";
-    // echo $num_col;
-
-    // $sum = 0;
-    // for($j = 0; $j < $n; $j++)
-    // {
-    //     $sum += intval($arr_m[$j]);
-    // }
-
-    // // Print output each line.
-    // echo "Case #".$i.": ".$sum;
-    // echo "\n";
 }
 
 fclose($stdin);
